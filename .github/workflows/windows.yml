@@ -28,7 +28,9 @@ jobs:
             cache-build-windows
       - name: Installing/Updating libraries
         run: |
-          haxe -cp commandline -D analyzer-optimize --run Main setup
+          haxelib setup C:/haxelib
+          haxelib install hxcpp > /dev/null --quiet
+          haxe -cp ./setup -D analyzer-optimize -main Main --interp
       - name: Building the game
         run: |
           haxelib run lime build windows
