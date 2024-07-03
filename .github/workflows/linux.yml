@@ -28,10 +28,13 @@ jobs:
             cache-build-linux
       - name: Installing LibVLC
         run: |
-          sudo apt-get install libvlc-dev libvlccore-dev
+          sudo apt-get install libvlc-dev
+          sudo apt-get install libvlccore-dev
       - name: Installing/Updating libraries
         run: |
-          haxe -cp commandline -D analyzer-optimize --run Main setup
+          haxelib setup ~/haxelib
+          haxelib install hxcpp
+          haxe -cp ./setup -D analyzer-optimize -main Main --interp
       - name: Building the game
         run: |
           haxelib run lime build linux
