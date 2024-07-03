@@ -34,6 +34,7 @@ jobs:
         run: |
           haxelib setup ~/haxelib
           haxelib install hxcpp
+          haxelib install hxvlc
           haxe -cp ./setup -D analyzer-optimize -main Main --interp
       - name: Building the game
         run: |
