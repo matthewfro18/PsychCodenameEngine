@@ -1,5 +1,5 @@
 
-name: Windows Build
+name: Build
 on:
   push:
   workflow_dispatch:
