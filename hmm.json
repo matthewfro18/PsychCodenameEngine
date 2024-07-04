@@ -61,6 +61,11 @@
       "version": null
     },
     {
+      "name": "away3d",
+      "type": "haxelib",
+      "version": null
+    },
+    {
       "name": "hxdiscord_rpc",
       "type": "git",
       "dir": null,
